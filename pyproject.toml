@@ -7,8 +7,26 @@ name = "campus-notifier"
 version = "0.1.0"
 description = "Campus event notification system"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = {text = "MIT"}
+
+dependencies = [
+    "Django==5.2.7",
+    "psycopg2-binary==2.9.11",
+    "python-decouple==3.8",
+    "pre-commit",
+    "python-dotenv",
+]
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "pytest",
+    "pytest-django",
+]
+
+[tool.uv]
+package = false
 
 [tool.ruff]
 # Set the maximum line length to 88 (Black's default)
