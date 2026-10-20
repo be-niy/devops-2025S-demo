@@ -133,3 +133,6 @@ line-ending = "lf"
 
 # Set the line length limit for docstrings
 # docstring-code-line-length = 72
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "campus_notifier.settings"
+python_files = ["test_*.py", "*_tests.py", "tests.py"]
