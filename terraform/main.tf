@@ -2,6 +2,10 @@
 resource "aws_ecr_repository" "devops_repo" {
   # The name for your repository
   name = "devops-repo"
+  # Use AWS-managed KMS encryption to protect stored container images.
+  encryption_configuration {
+    encryption_type = "KMS"
+  }
 
   # This setting makes sure you can't accidentally overwrite an image tag
   image_tag_mutability = "IMMUTABLE"
